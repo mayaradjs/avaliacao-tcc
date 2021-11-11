@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Sample Application</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link id="custom-css" rel="stylesheet" href="~/css/site.css" />
+    <link id="custom-css" rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -28,10 +28,11 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
-                    <a href="#" onclick="setStyleSheet('/css/site.css');" style="margin-right: 5px;"> PRINCIPAL </a>
-                    <a href="#" onclick="setStyleSheet('/css/site2.css');" style="margin-right: 5px;"> DARK MODE </a>
-                    <a href="#" onclick="setStyleSheet('/css/tema3.css');" style="margin-right: 5px;"> TEMA SECUNDÁRIO </a>
-                    <a href="#" onclick="setStyleSheet('/css/tema4.css');" style="margin-right: 5px;"> TEMA TERCIÁRIO </a>
+                    <a href="#" onclick="setStyleSheet('/lib/bootstrap/dist/css/bootstrap.min.css');" style="margin-right: 5px;"> Padrão </a>
+                    <a href="#" onclick="setStyleSheet('/css/bootstrap.simplex.min.css');" style="margin-right: 5px;"> Simplex </a>
+                    <a href="#" onclick="setStyleSheet('/css/bootstrap.darkly.min.css');" style="margin-right: 5px;"> Darkly </a>
+                    <a href="#" onclick="setStyleSheet('/css/bootstrap.superhero.min.css');" style="margin-right: 5px;"> Superhero </a>
+                    <a href="#" onclick="setStyleSheet('/css/bootstrap.solar.min.css');" style="margin-right: 5px;"> Solar </a>
 
                 </div>
             </div>
@@ -45,7 +46,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; @DateTime.Now.Year - WebApplication1 - <i>bootswatch.com</i> - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
